@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soto Calcos | Impresión 3D — Lo más vendido de MakerWorld</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme:{extend:{
+    colors:{
+      // TUS 4 PALETAS ORIGINALES
+      p1:'#111827',p2:'#00B4D8',p3:'#F0F4F8',p4:'#1F2937',p5:'#90E0EF',
+      c1:'#7C3AED',c2:'#EC4899',c3:'#EDE9FE',c4:'#4C1D95',c5:'#BE185D',
+      n1:'#10B981',n2:'#F59E0B',n3:'#ECFDF5',n4:'#065F46',n5:'#92400E',
+      e1:'#EF4444',e2:'#F97316',e3:'#FFF7ED',e4:'#991B1B',e5:'#9A3412',
+      // Mercado Libre
+      mly:'#FFF159',mlb:'#3483FA'
+    },
+    fontFamily:{sans:['Montserrat','sans-serif'],oswald:['Oswald','sans-serif']}
+  }}
+}
+</script>
+<style>
+  .card{transition:all .22s ease}
+  .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12);transform:translateY(-2px)}
+  .cart{transform:translateX(100%);transition:.35s}
+  .cart.open{transform:translateX(0)}
+  .tag{font-size:11px;padding:2px 6px;border-radius:4px;font-weight:700}
+</style>
+</head>
+<body class="bg-p3">
+
+<!-- HEADER ML -->
+<header class="bg-mly">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex items-center gap-4">
+      <a href="#" class="font-oswald text-2xl text-p1 min-w-[160px]">SOTO CALCOS</a>
+      <div class="flex-1 relative">
+        <input id="buscador" onkeyup="filtrar()" placeholder="Buscar más de 1000 diseños de MakerWorld..." class="w-full h-11 px-4 pr-12 rounded shadow-sm outline-none">
+        <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+      </div>
+      <div class="hidden md:flex items-center gap-5 text-p1">
+        <a href="https://instagram.com/sotocalcos" target="_blank"><i class="fa-brands fa-instagram text-xl"></i></a>
+        <a href="https://wa.me/543549596909" target="_blank"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+        <button onclick="abrirCarro()" class="relative">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span id="cnt" class="absolute -top-2 -right-2 bg-e1 text-white text-[11px] rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between mt-2 text-[13px] text-p1/80">
+      <span><i class="fa-solid fa-location-dot"></i> Enviamos a todo Córdoba y Argentina</span>
+      <nav class="hidden md:flex gap-5">
+        <a href="#tendencias" class="hover:text-black font-semibold">🔥 TENDENCIAS MAKERWORLD</a>
+        <a href="#vitales" class="hover:text-black">⚙️ Vitales / Imprescindibles</a>
+        <a href="#decoracion" class="hover:text-black">✨ Decoración</a>
+        <a href="#ofertas" class="hover:text-black text-e1 font-bold">OFERTAS</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<section class="bg-gradient-to-r from-p2 to-p5 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-8 flex items-center justify-between">
+    <div>
+      <p class="text-xs uppercase tracking-widest">Importados desde MakerWorld · Impresos en Bambu Lab A1</p>
+      <h1 class="font-oswald text-4xl md:text-5xl mt-1">LOS DISEÑOS MÁS IMPRESOS DEL MUNDO</h1>
+      <p class="mt-1">Precios calculados con costos reales · Hasta <b>12 cuotas sin interés</b></p>
+    </div>
+    <i class="fa-solid fa-fire text-white/30 text-8xl hidden md:block"></i>
+  </div>
+</section>
+
+<!-- ============== 🔥 TENDENCIAS EN PRIMERA PLANA ============== -->
+<section id="tendencias" class="max-w-7xl mx-auto px-4 mt-8">
+  <h2 class="font-oswald text-2xl md:text-3xl flex items-center gap-2">
+    <i class="fa-solid fa-fire text-e2"></i> LO MÁS BUSCADO · TENDENCIA EN MAKERWORLD
+    <span class="tag bg-e1 text-white ml-2">TOP 10 MUNDIAL</span>
+  </h2>
+  <p class="text-sm text-p4/70 mb-4">Los diseños con más descargas, impresiones y me gusta de toda la plataforma</p>
+
+  <div id="grid-tendencias" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+
+    <!-- T1 -->
+    <div class="card bg-white rounded overflow-hidden" data-n="Serpiente Articulada">
+      <div class="h-36 bg-gradient-to-br from-e1 to-e2 flex items-center justify-center text-white text-6xl relative">
+        <span class="tag bg-e1 text-white absolute top-2 left-2">🔥 VIRAL</span>
+        <i class="fa-solid fa-worm"></i>
+      </div>
+      <div class="p-3">
+        <p class="text-[13px] h-10 overflow-hidden">Serpiente Articulada 60 cm · Cola móvil · Colores a elección</p>
+        <div class="precio text-2xl font-semibold mt-1">$10.900</div>
+        <div class="text-[13px]">12x <b>$1.180</b> sin interés</div>
+        <div class="envio text-n1 text-[13px] font-semibold mt-1"><i class="fa-solid fa-truck"></i> Envío gratis</div>
+        <div class="text-[11px] text-gray-500">⏱ 3h 10m · 🧵 95 g · Bambu A1</div>
+        <button onclick="add(1,'Serpiente Articulada',10900)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm font-semibold">Agregar</button>
+      </div>
+    </div>
+
+    <!-- T2 -->
+    <div class="card bg-white rounded overflow-hidden" data-n="Dragón Chimuelo">
+      <div class="h-36 bg-gradient-to-br from-p1 to-p4 flex items-center justify-center text-p5 text-6xl relative">
+        <span class="tag bg-c1 text-white absolute top-2 left-2">#1 MÁS VENDIDO</span>
+        <i class="fa-solid fa-dragon"></i>
+      </div>
+      <div class="p-3">
+        <p class="text-[13px] h-10 overflow-hidden">Dragón Chimuelo Articulado · Alas móviles · Multicolor</p>
+        <div class="precio text-2xl font-semibold mt-1">$13.900</div>
+        <div class="text-[13px]">12x <b>$1.505</b> sin interés</div>
+        <div class="envio text-n1 text-[13px] font-semibold mt-1"><i class="fa-solid fa-truck"></i> Envío gratis</div>
+        <div class="text-[11px] text-gray-500">⏱ 4h 15m · 🧵 120 g · Bambu A1</div>
+        <button onclick="add(2,'Dragón Chimuelo',13900)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm font-semibold">Agregar</button>
+      </div>
+    </div>
+
+    <!-- T3 -->
+    <div class="card bg-white rounded overflow-hidden" data-n="Tiburón Flex">
+      <div class="h-36 bg-gradient-to-br from-p2 to-p5 flex items-center justify-center text-white text-6xl relative">
+        <span class="tag bg-p2 text-white absolute top-2 left-2">TRENDING</span>
+        <i class="fa-solid fa-fish"></i>
+      </div>
+      <div class="p-3">
+        <p class="text-[13px] h-10 overflow-hidden">Tiburón Esqueleto Articulado · Todas las piezas se mueven</p>
+        <div class="precio text-2xl font-semibold mt-1">$9.500</div>
+        <div class="text-[13px]">6x <b>$1.820</b> sin interés</div>
+        <div class="envio text-n1 text-[13px] font-semibold mt-1"><i class="fa-solid fa-bolt"></i> Envío rápido</div>
+        <div class="text-[11px] text-gray-500">⏱ 2h 40m · 🧵 82 g · Bambu A1</div>
+        <button onclick="add(3,'Tiburón Flex',9500)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm font-semibold">Agregar</button>
+      </div>
+    </div>
+
+    <!-- T4 -->
+    <div class="card bg-white rounded overflow-hidden" data-n="Pulpo Fidget">
+      <div class="h-36 bg-gradient-to-br from-c1 to-c2 flex items-center justify-center text-white text-6xl relative">
+        <span class="tag bg-c2 text-white absolute top-2 left-2">SENSORIAL</span>
+        <i class="fa-solid fa-spaghetti-monster-flying"></i>
+      </div>
+      <div class="p-3">
+        <p class="text-[13px] h-10 overflow-hidden">Pulpo Fidget · Antiestrés · Todas las patas articuladas</p>
+        <div class="precio text-2xl font-semibold mt-1">$6.900</div>
+        <div class="text-[13px]">12x <b>$747</b> sin interés</div>
+        <div class="envio text-n1 text-[13px] font-semibold mt-1"><i class="fa-solid fa-bolt"></i> Envío rápido</div>
+        <div class="text-[11px] text-gray-500">⏱ 1h 50m · 🧵 58 g · Bambu A1</div>
+        <button onclick="add(4,'Pulpo Fidget',6900)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm font-semibold">Agregar</button>
+      </div>
+    </div>
+
+    <!-- T5 -->
+    <div class="card bg-white rounded overflow-hidden" data-n="Benchy">
+      <div class="h-36 bg-gradient-to-br from-n2 to-n1 flex items-center justify-center text-white text-6xl relative">
+        <span class="tag bg-p1 text-white absolute top-2 left-2">EL CLÁSICO</span>
+        <i class="fa-solid fa-ship"></i>
+      </div>
+      <div class="p-3">
+        <p class="text-[13px] h-10 overflow-hidden">#3DBenchy · El test mundial de calidad de impresión</p>
+        <div class="precio text-2xl font-semibold mt-1">$3.900</div>
+        <div class="text-[13px]">3x <b>$1.300</b> sin interés</div>
+        <div class="envio text-n2 text-[13px] font-semibold mt-1"><i class="fa-solid fa-star"></i> Ideal regalo</div>
+        <div class="text-[11px] text-gray-500">⏱ 58 min · 🧵 28 g · Bambu A1</div>
+        <button onclick="add(5,'Benchy',3900)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm font-semibold">Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS ML -->
+<section class="max-w-7xl mx-auto px-4 mt-8 grid md:grid-cols-4 bg-white rounded divide-y md:divide-y-0 md:divide-x">
+  <div class="p-5 text-center"><i class="fa-solid fa-credit-card text-mlb text-3xl mb-1"></i><b>12 cuotas sin interés</b><p class="text-xs text-gray-500">Con todas las tarjetas</p></div>
+  <div class="p-5 text-center"><i class="fa-solid fa-truck text-n1 text-3xl mb-1"></i><b>Envío gratis</b><p class="text-xs text-gray-500">Desde $ 12.000</p></div>
+  <div class="p-5 text-center"><i class="fa-solid fa-cube text-p2 text-3xl mb-1"></i><b>Impreso en Bambu A1</b><p class="text-xs text-gray-500">Alta velocidad y calidad</p></div>
+  <div class="p-5 text-center"><i class="fa-brands fa-whatsapp text-n1 text-3xl mb-1"></i><b>Atención inmediata</b><p class="text-xs text-gray-500">+54 3549 59‑6909</p></div>
+</section>
+
+<!-- ============== ⚙️ SECCIÓN VITALES / MUST HAVES ============== -->
+<section id="vitales" class="max-w-7xl mx-auto px-4 mt-10">
+  <h2 class="font-oswald text-2xl md:text-3xl flex items-center gap-2"><i class="fa-solid fa-wrench text-p2"></i> VITALES · MUST HAVES MAKERWORLD</h2>
+  <p class="text-sm text-p4/70 mb-4">Los diseños que TODO el mundo con impresora 3D tiene que tener</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+
+    <div class="card bg-white rounded overflow-hidden">
+      <div class="h-36 bg-p3 flex items-center justify-center text-p1 text-6xl"><i class="fa-solid fa-broom"></i></div>
+      <div class="p-3">
+        <p class="text-[13px] h-10">Limpiacama Bambu Lab A1 · Recambio original</p>
+        <div class="precio text-2xl font-semibold">$4.990</div>
+        <div class="text-[11px] text-gray-500">⏱ 1h 10m · 🧵 40 g</div>
+        <button onclick="add(6,'Limpiacama A1',4990)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm">Agregar</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded overflow-hidden">
+      <div class="h-36 bg-p3 flex items-center justify-center text-p2 text-6xl"><i class="fa-solid fa-mobile-screen"></i></div>
+      <div class="p-3">
+        <p class="text-[13px] h-10">Soporte Celular Universal · Ángulo perfecto</p>
+        <div class="precio text-2xl font-semibold">$6.990</div>
+        <div class="envio text-n1 text-[13px] font-semibold"><i class="fa-solid fa-truck"></i> Envío gratis</div>
+        <div class="text-[11px] text-gray-500">⏱ 1h 35m · 🧵 62 g</div>
+        <button onclick="add(7,'Soporte Celular',6990)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm">Agregar</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded overflow-hidden">
+      <div class="h-36 bg-n3 flex items-center justify-center text-n4 text-6xl"><i class="fa-solid fa-seedling"></i></div>
+      <div class="p-3">
+        <p class="text-[13px] h-10">Maceta Raíces · Diseño Drift · Única</p>
+        <div class="precio text-2xl font-semibold">$16.500</div>
+        <div class="envio text-n1 text-[13px] font-semibold"><i class="fa-solid fa-truck"></i> Envío gratis</div>
+        <div class="text-[11px] text-gray-500">⏱ 5h 20m · 🧵 145 g</div>
+        <button onclick="add(8,'Maceta Raíces',16500)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm">Agregar</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded overflow-hidden">
+      <div class="h-36 bg-c3 flex items-center justify-center text-c4 text-6xl"><i class="fa-solid fa-cat"></i></div>
+      <div class="p-3">
+        <p class="text-[13px] h-10">Gato Low Poly · Decoración moderna · 15 cm</p>
+        <div class="precio text-2xl font-semibold">$12.500</div>
+        <div class="envio text-n1 text-[13px] font-semibold"><i class="fa-solid fa-truck"></i> Envío gratis</div>
+        <div class="text-[11px] text-gray-500">⏱ 3h 40m · 🧵 110 g</div>
+        <button onclick="add(9,'Gato Low Poly',12500)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm">Agregar</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded overflow-hidden">
+      <div class="h-36 bg-e3 flex items-center justify-center text-e5 text-6xl"><i class="fa-solid fa-candle-holder"></i></div>
+      <div class="p-3">
+        <p class="text-[13px] h-10">Porta Vela Ondulado · Efecto luz increíble</p>
+        <div class="precio text-2xl font-semibold">$8.500</div>
+        <div class="text-[11px] text-gray-500">⏱ 2h 20m · 🧵 75 g</div>
+        <button onclick="add(10,'Porta Vela',8500)" class="w-full mt-2 bg-mlb hover:bg-blue-700 text-white py-1.5 rounded text-sm">Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="max-w-7xl mx-auto px-4 mt-12 grid md:grid-cols-2 gap-4">
+  <a href="https://wa.me/543549596909" target="_blank" class="bg-n1 hover:brightness-95 text-white p-6 rounded-xl flex items-center gap-4">
+    <i class="fa-brands fa-whatsapp text-5xl"></i>
+    <div><h3 class="font-oswald text-2xl">WHATSAPP</h3><p>+54 3549 59‑6909 · Respondemos al toque</p></div>
+  </a>
+  <a href="https://instagram.com/sotocalcos" target="_blank" class="bg-gradient-to-r from-c1 to-c2 text-white p-6 rounded-xl flex items-center gap-4">
+    <i class="fa-brands fa-instagram text-5xl"></i>
+    <div><h3 class="font-oswald text-2xl">INSTAGRAM</h3><p>@sotocalcos · Nuevos diseños todos los días</p></div>
+  </a>
+</section>
+
+<footer class="bg-p1 text-gray-400 text-sm py-5 mt-10 text-center">
+  © 2026 <b class="text-white">Soto Calcos</b> · Impresión 3D · Bambu Lab A1 · Diseños de la comunidad MakerWorld
+</footer>
+
+<!-- CARRITO -->
+<div id="fondo" onclick="cerrarCarro()" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+<aside id="carro" class="cart fixed top-0 right-0 h-full w-full sm:w-[440px] bg-white z-50 flex flex-col shadow-2xl">
+  <div class="bg-p1 text-white p-4 flex justify-between items-center">
+    <h3 class="font-semibold"><i class="fa-solid fa-cart-shopping mr-2"></i>Tu carrito</h3>
+    <button onclick="cerrarCarro()" class="text-2xl leading-none">×</button>
+  </div>
+  <div id="vacio" class="flex-1 flex flex-col items-center justify-center text-gray-400 p-6">
+    <i class="fa-solid fa-cart-arrow-down text-6xl mb-2"></i><p>Agregá los diseños que más te gusten</p>
+  </div>
+  <div id="lleno" class="flex-1 overflow-y-auto p-4 hidden"><div id="items"></div></div>
+  <div id="pie" class="border-t p-4 hidden">
+    <div class="flex justify-between text-lg mb-2"><span>Total</span><span id="total" class="font-bold text-2xl">$0</span></div>
+    <button onclick="enviarWA()" class="w-full bg-mly hover:brightness-95 text-p1 font-bold py-3 rounded">
+      <i class="fa-brands fa-whatsapp mr-1"></i> Terminar compra por WhatsApp
+    </button>
+  </div>
+</aside>
+
+<script>
+const WA='543549596909';
+let c=JSON.parse(localStorage.getItem('sc')||'[]');
+function guardar(){localStorage.setItem('sc',JSON.stringify(c));render()}
+function add(id,n,p){const x=c.find(e=>e.id==id);x?x.q++:c.push({id,nombre:n,precio:p,q:1});guardar();abrirCarro()}
+function qty(id,d){const x=c.find(e=>e.id==id);x.q+=d;if(x.q<=0)c=c.filter(e=>e.id!=id);guardar()}
+function render(){
+  const t=c.reduce((s,p)=>s+p.precio*p.q,0),qt=c.reduce((s,p)=>s+p.q,0);
+  document.getElementById('cnt').textContent=qt;
+  document.getElementById('vacio').classList.toggle('hidden',c.length>0);
+  document.getElementById('lleno').classList.toggle('hidden',c.length==0);
+  document.getElementById('pie').classList.toggle('hidden',c.length==0);
+  document.getElementById('items').innerHTML=c.map(p=>`
+    <div class="flex gap-3 py-3 border-b">
+      <div class="flex-1">
+        <div class="text-sm">${p.nombre}</div><div class="font-semibold">$${p.precio.toLocaleString('es-AR')}</div>
+        <div class="flex gap-2 mt-1">
+          <button onclick="qty(${p.id},-1)" class="w-6 h-6 bg-p3 rounded">-</button>
+          <span class="w-5 text-center">${p.q}</span>
+          <button onclick="qty(${p.id},1)" class="w-6 h-6 bg-p3 rounded">+</button>
+        </div>
+      </div>
+      <div class="font-bold">$${(p.precio*p.q).toLocaleString('es-AR')}</div>
+    </div>`).join('');
+  document.getElementById('total').textContent='$'+t.toLocaleString('es-AR');
+}
+function abrirCarro(){document.getElementById('carro').classList.add('open');document.getElementById('fondo').classList.remove('hidden')}
+function cerrarCarro(){document.getElementById('carro').classList.remove('open');document.getElementById('fondo').classList.add('hidden')}
+function enviarWA(){
+  let t=0,m=`🛒 *PEDIDO SOTO CALCOS*\n📦 Diseños MakerWorld impresos en Bambu A1\n\n`;
+  c.forEach(p=>{const s=p.precio*p.q;m+=`• ${p.q}x ${p.nombre} → $${s.toLocaleString('es-AR')}\n`;t+=s});
+  m+=`\n💰 TOTAL: *$${t.toLocaleString('es-AR')}*`;
+  open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank');
+}
+function filtrar(){
+  const q=document.getElementById('buscador').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(x=>x.style.display=x.dataset.n.toLowerCase().includes(q)?'':'none');
+}
+render();
+</script>
+</body>
+</html>
